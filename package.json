@@ -1,0 +1,56 @@
+{
+  "name": "spiderforkindle-server",
+  "version": "1.0.0",
+  "description": "### Why ？",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=production node index",
+    "dev": "npm run lintfix && nodemon --inspect index.js",
+    "lint": "eslint ./",
+    "lintfix": "eslint --fix ./",
+    "test": "npm run lint",
+    "ci": "npm run lint",
+    "deploy": "npm run lintfix && git push heroku cors:master"
+  },
+  "dependencies": {
+    "@koa/cors": "^2.2.1",
+    "archiver": "^2.1.1",
+    "bytes": "^3.0.0",
+    "deepmerge": "^2.1.0",
+    "file-type": "^7.6.0",
+    "glob": "^7.1.2",
+    "koa": "^2.5.0",
+    "koa-bodyparser": "^4.2.0",
+    "koa-router": "^7.4.0",
+    "lodash": "^4.17.5",
+    "nodemailer": "^4.6.4",
+    "progress-stream": "^2.0.0",
+    "unzipper": "^0.8.14",
+    "uuid": "^3.2.1",
+    "validator": "^9.4.1",
+    "ws": "^5.1.1"
+  },
+  "devDependencies": {
+    "cz-conventional-changelog": "^2.1.0",
+    "eslint": "^4.19.0",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.7.0",
+    "eslint-plugin-standard": "^3.0.1",
+    "nodemon": "^1.17.3"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@bitbucket.org/btop/kindlespider-server.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/btop/kindlespider-server#readme",
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}
